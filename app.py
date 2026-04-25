@@ -107,11 +107,11 @@ def handle_message(event):
     user_message = event["message"]["text"]
     source_type = event["source"]["type"]
 
-    # グループの場合は@増田くんへのメンションのみ反応
-    if source_type == "group":
-        if BOT_NAME not in user_message:
-            return
-        user_message = user_message.replace(BOT_NAME, "").strip()
+       # @増田くんへのメンションのみ反応
+    if BOT_NAME not in user_message:
+        return
+    user_message = user_message.replace(BOT_NAME, "").strip()
+
 
     reply_token = event["replyToken"]
     chat_id = event["source"].get("groupId") or event["source"].get("userId")
