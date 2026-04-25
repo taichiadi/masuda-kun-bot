@@ -107,8 +107,11 @@ def handle_message(event):
     user_message = event["message"]["text"]
     source_type = event["source"]["type"]
 
-       # @増田くんへのメンションのみ反応
+          # 受信メッセージをログに出力
+    print(f"受信メッセージ: [{user_message}]")
+    # @増田くんへのメンションのみ反応
     if BOT_NAME not in user_message:
+        print(f"メンションなし、スキップ")
         return
     user_message = user_message.replace(BOT_NAME, "").strip()
 
