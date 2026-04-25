@@ -16,7 +16,8 @@ ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY")
 SUPABASE_URL = os.environ.get("SUPABASE_URL")
 SUPABASE_KEY = os.environ.get("SUPABASE_KEY")
 TAVILY_API_KEY = os.environ.get("TAVILY_API_KEY")
-BOT_NAME = "@増田くん"
+BOT_NAME = "増田くん"
+
 
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 tavily = TavilyClient(api_key=TAVILY_API_KEY)
