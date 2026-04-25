@@ -1,0 +1,6 @@
+flask
+anthropic
+requests
+gunicorn
+supabase
+tavily-python
